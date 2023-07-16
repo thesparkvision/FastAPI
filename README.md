@@ -1,3 +1,5 @@
+[![CI](https://github.com/thesparkvision/FastAPI/actions/workflows/build_and_run.yaml/badge.svg)](https://github.com/thesparkvision/FastAPI/actions/workflows/build_and_run.yaml)
+
 ## Intro
 
 This repository is to practice FastAPI code while learning it
