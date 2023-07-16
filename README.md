@@ -4,6 +4,10 @@
 
 This repository is to practice FastAPI code while learning it
 
+## Live App Link
+
+https://fastapi-exp.onrender.com/
+
 ## Setup
 
 **Python Version**: 3.11.1
