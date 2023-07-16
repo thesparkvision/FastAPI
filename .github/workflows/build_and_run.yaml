@@ -1,9 +1,9 @@
 name: CI
 
 on:
-  push:
+  workflow_dispatch:
     branches:
-      - "main"
+      - main
 
 env:
   TEST_TAG: amanpandya/fastapi-learning:test
