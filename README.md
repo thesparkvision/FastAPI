@@ -61,6 +61,6 @@ you can follow these chain of commands:
 
 ## Run Lint
 
-    ```shell
-    bash scripts/lint.sh
-    ```
+```shell
+bash scripts/lint.sh
+```
