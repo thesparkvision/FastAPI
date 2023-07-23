@@ -24,6 +24,15 @@ https://fastapi-exp.onrender.com/
     pip install -r requirements.txt
     ```
 
+- Add these environment variables in .env file or in shell
+
+    ```bash
+    MONGO_HOST=localhost
+    MONGO_PORT=27017
+    ```
+
+- Install MongoDB or use MongoDB Docker Image (https://hub.docker.com/_/mongo)
+
 ## Run the app directly in local environment
 
 ```bash
