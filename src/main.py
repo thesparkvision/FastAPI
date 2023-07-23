@@ -1,6 +1,8 @@
+import uvicorn
 from fastapi import FastAPI
-from src.routes import students
-from src.data.database import db_connection
+from routes import students
+from data.database import db_connection
+from config import config
 
 app = FastAPI()
 app.include_router(students.router, tags=["Student"], prefix="/students")
@@ -12,3 +14,10 @@ def close_db_connection():
 @app.get("/")
 async def root():
     return {"message": "Welcome to the App!"}
+
+if __name__ == "__main__":
+    uvicorn.run(
+        app="main:app",
+        host=config.APP_HOST,
+        port=config.APP_PORT
+    )

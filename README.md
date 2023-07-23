@@ -27,16 +27,18 @@ https://fastapi-exp.onrender.com/
 - Add these environment variables in .env file or in shell
 
     ```bash
-    MONGO_HOST=localhost
-    MONGO_PORT=27017
+    export MONGO_URI=mongodb://172.17.0.2:27017
+    export PYTHONPATH=$PYTHONPATH:$PWD
+    export APP_HOST=0.0.0.0
+    export APP_PORT=8000
     ```
 
 - Install MongoDB or use MongoDB Docker Image (https://hub.docker.com/_/mongo)
 
-## Run the app directly in local environment
+## Run the app directly in local environment inside src folder
 
 ```bash
-python uvicorn src.main:app
+python3 main.py
 ```
 
 ## Local Docker Container Setup
@@ -48,17 +50,11 @@ you can follow these chain of commands:
 - Build the Docker Image
 
     ```bash
-    docker build . -t fastapi-learning:v1 -f deploy/Dockerfile --no-cache
+    docker build . -t fastapi-learning:v1 -f deploy/Dockerfile
     ```
 
-- Create Docker container
+- Create and Run Docker container
 
     ```bash
-    docker create --name="test-container" fastapi-learning:v1
-    ```
-
-- Run the container
-
-    ```bash
-    docker start test-container
+    docker run -d --net=host fastapi-learning:v1
     ```

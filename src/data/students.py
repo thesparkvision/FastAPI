@@ -1,12 +1,12 @@
 from .database import db_connection
-from src.config import MAX_COLLECTIONS_COUNT
+from config import config
 from uuid import UUID
 
 student_collections = db_connection.db.get_collection("students")
 
 async def get_students():
     query_filter = {}
-    return await student_collections.find(query_filter).to_list(length = MAX_COLLECTIONS_COUNT)
+    return await student_collections.find(query_filter).to_list(length = config.MAX_COLLECTIONS_COUNT)
 
 async def get_student_by_student_id(student_id: UUID):
     query_filter = {

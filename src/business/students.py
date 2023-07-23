@@ -1,6 +1,6 @@
 from fastapi import HTTPException, status
-from src.data import students
-from src.models import students as student_models
+from data import students
+from models import students as student_models
 from uuid import UUID
 import datetime
 

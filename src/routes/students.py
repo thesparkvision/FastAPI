@@ -1,6 +1,6 @@
 from fastapi import APIRouter, status
-from src.business import students
-from src.models import students as student_models
+from business import students
+from models import students as student_models
 from uuid import UUID
 
 router = APIRouter()
