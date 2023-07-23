@@ -8,8 +8,7 @@ logger = logging.Logger(os.path.basename(__file__))
 class DatabaseConnection:    
     def __init__(self):
         self.client = motor_package.AsyncIOMotorClient(
-            host = config.MONGO_HOST, 
-            port = int(config.MONGO_PORT), 
+            config.MONGO_URI,
             timeoutMS = 10,
             uuidRepresentation='standard'
         )
