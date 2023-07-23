@@ -1,8 +1,9 @@
 import uvicorn
 from fastapi import FastAPI
-from routes import students
-from data.database import db_connection
+
 from config import config
+from data.database import db_connection
+from routes import students
 
 app = FastAPI()
 app.include_router(students.router, tags=["Student"], prefix="/students")

@@ -1,6 +1,8 @@
-import os
 import logging
+import os
+
 import motor.motor_asyncio as motor_package
+
 from config import config
 
 logger = logging.Logger(os.path.basename(__file__))

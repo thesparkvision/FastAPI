@@ -1,7 +1,9 @@
+from uuid import UUID
+
 from fastapi import APIRouter, status
+
 from business import students
 from models import students as student_models
-from uuid import UUID
 
 router = APIRouter()
 
@@ -39,5 +41,5 @@ async def add_student(student: student_models.Student):
     path = "/{student_id}",
     status_code = status.HTTP_200_OK
 )
-async def add_student(student_id: UUID, updated_student: student_models.Student):
+async def update_student(student_id: UUID, updated_student: student_models.Student):
     return await students.update_student(student_id, updated_student)

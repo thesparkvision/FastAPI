@@ -1,8 +1,11 @@
+import datetime
+from uuid import UUID
+
 from fastapi import HTTPException, status
+
 from data import students
 from models import students as student_models
-from uuid import UUID
-import datetime
+
 
 async def get_all_students():
     student_records = await students.get_students()

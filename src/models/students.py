@@ -1,9 +1,10 @@
-from pydantic import BaseModel, Field
-from enum import Enum
-from typing import List, Annotated
-from uuid import UUID, uuid4
 from datetime import date
+from typing import Annotated, List
+from uuid import UUID, uuid4
+
 from fastapi import Query
+from pydantic import BaseModel, Field
+
 
 class Student(BaseModel):
     student_id: UUID = Field(default_factory=uuid4)

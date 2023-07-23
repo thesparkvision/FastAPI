@@ -1,6 +1,8 @@
-from .database import db_connection
-from config import config
 from uuid import UUID
+
+from config import config
+
+from .database import db_connection
 
 student_collections = db_connection.db.get_collection("students")
 
